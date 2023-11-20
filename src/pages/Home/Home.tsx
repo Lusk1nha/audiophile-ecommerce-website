@@ -6,6 +6,60 @@ function Home() {
     <StyledHome>
       <Navbar />
       <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
+      <div>Home</div>
     </StyledHome>
   );
 }

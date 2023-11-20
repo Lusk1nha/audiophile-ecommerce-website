@@ -14,8 +14,6 @@ const StyledNavbar = styled.nav<StyledNavbarProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  position: relative;
 `;
 
 const MenuButton = styled(RawButton)`
@@ -110,14 +108,19 @@ const Line = styled.div`
 `;
 
 const MobileContent = styled.div`
-  background-color: red;
+  background: rgba(0, 0, 0, 0.65);
 
   width: 100%;
+  height: auto;
   display: flex;
 
   position: absolute;
-  top: 100%;
+  top: 90px;
   left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 5;
 
   @media (min-width: ${(props) => props.theme.sizes.desktop}) {
     display: none;
@@ -128,15 +131,25 @@ const ContentWrapper = styled.div`
   background-color: white;
 
   width: 100%;
-  height: 100%;
+  height: min-content;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border-radius: 0px 0px 8px 8px;
+
+  z-index: 10;
+
+  @media (min-width: ${(props) => props.theme.sizes.tablet}) {
+    height: 340px;
+  }
 `;
 
 const ContentList = styled.ul`
   max-width: 485px;
+
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -145,13 +158,11 @@ const ContentList = styled.ul`
 
   list-style: none;
 
-  flex: 1;
-
-  padding: 4.25rem 1.5rem 1.5rem;
+  padding: 4.25rem 1.5rem 2.188rem;
   gap: 4.25rem;
 
   @media (min-width: ${(props) => props.theme.sizes.tablet}) {
-    max-width: 768px;
+    max-width: 860px;
 
     padding: 4.25rem 2.5rem;
     flex-direction: row;

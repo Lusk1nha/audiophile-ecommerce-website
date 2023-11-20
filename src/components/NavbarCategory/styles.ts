@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { RawButton } from "../../styles/reusables-styles";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const StyledNavbarCategory = styled.li`
   width: 100%;
-  min-height: 165px;
+  height: 165px;
 
   display: flex;
   flex-direction: column;
@@ -18,19 +19,11 @@ const StyledNavbarCategory = styled.li`
 
   position: relative;
 
-  transition: transform 200ms linear;
-
   cursor: pointer;
-
-  &:hover {
-    transform: scale(1.04);
-  }
 `;
 
-const CategoryImage = styled.img`
-  height: 90px;
-
-  bottom: 70%;
+const CategoryImage = styled(LazyLoadImage)`
+  bottom: 75%;
   left: 0;
   right: 0;
 

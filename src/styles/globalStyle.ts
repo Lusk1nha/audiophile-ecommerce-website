@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
 
-    transition-property: color, background, border;
+    transition-property: color, background, border, opacity;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
   }
