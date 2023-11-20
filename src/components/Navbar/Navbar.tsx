@@ -18,6 +18,7 @@ import {
 } from "./styles";
 
 import { NavbarCategory } from "../NavbarCategory/NavbarCategory";
+import { CrossIcon } from "../Icons/CrossIcon";
 
 interface INavbarProps {
   isTranslucid?: boolean;
@@ -26,6 +27,19 @@ interface INavbarProps {
 function Navbar({ isTranslucid }: INavbarProps) {
   const [isContentOpen, setIsContentOpen] = useState<boolean>(false);
 
+  function toggleContentOpen(
+    event: React.MouseEvent<any, MouseEvent>,
+    bool?: boolean
+  ) {
+    event.preventDefault();
+    setIsContentOpen((prevState) => bool ?? !prevState);
+  }
+
+  function onClickInContentList(event: React.MouseEvent<any, MouseEvent>) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+
   return (
     <StyledNavbar $isTranslucid={isTranslucid} className="navbar-container">
       <Wrapper $maxWidth={"1110px"}>
@@ -33,9 +47,9 @@ function Navbar({ isTranslucid }: INavbarProps) {
           <MobileFlex>
             <MenuButton
               title="Click here to open the Menu"
-              onClick={() => setIsContentOpen((prevState) => !prevState)}
+              onClick={toggleContentOpen}
             >
-              <MenuIcon />
+              {isContentOpen ? <CrossIcon /> : <MenuIcon />}
             </MenuButton>
 
             <LogoContainer title="Logo of AudioPhile">
@@ -59,8 +73,11 @@ function Navbar({ isTranslucid }: INavbarProps) {
       </Wrapper>
 
       {isContentOpen ? (
-        <MobileContent className="mobile-navbar-content">
-          <ContentWrapper>
+        <MobileContent
+          className="mobile-navbar-content"
+          onClick={(event) => toggleContentOpen(event, false)}
+        >
+          <ContentWrapper onClick={onClickInContentList}>
             <ContentList>
               <NavbarCategory
                 title="Headphones"

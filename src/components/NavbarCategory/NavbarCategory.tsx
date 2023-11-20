@@ -1,4 +1,3 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { LeftArrowIcon } from "../Icons/LeftArrowIcon";
 import {
   CategoryImage,
@@ -15,7 +14,6 @@ interface INavbarCategoryProps {
 function NavbarCategory({ title, image }: INavbarCategoryProps) {
   return (
     <StyledNavbarCategory title={title}>
-      {/* <LazyLoadImage height={90} src={image} /> */}
       <CategoryImage
         effect="blur"
         src={image}

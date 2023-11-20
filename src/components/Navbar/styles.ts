@@ -17,6 +17,8 @@ const StyledNavbar = styled.nav<StyledNavbarProps>`
 `;
 
 const MenuButton = styled(RawButton)`
+  width: 20px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,13 +143,15 @@ const ContentWrapper = styled.div`
 
   z-index: 10;
 
+  cursor: default;
+
   @media (min-width: ${(props) => props.theme.sizes.tablet}) {
     height: 340px;
   }
 `;
 
 const ContentList = styled.ul`
-  max-width: 485px;
+  max-width: 425px;
 
   width: 100%;
 
