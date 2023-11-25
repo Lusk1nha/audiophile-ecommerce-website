@@ -3,6 +3,8 @@ import styled, { css } from "styled-components";
 type WrapperProps = {
   $maxWidth?: number | string;
   $maxHeight?: number | string;
+  $width?: number | string;
+  $height?: number | string;
   $justifyContent?: "flex-start" | "flex-end" | "center";
   $alignItems?: "flex-start" | "flex-end" | "center";
   $flex?: number | "none" | "unset";
@@ -11,10 +13,22 @@ type WrapperProps = {
 const Wrapper = styled.div<WrapperProps>`
   display: flex;
   flex-direction: column;
-  flex: 1;
 
   width: 100%;
-  height: 100%;
+
+  ${(props) =>
+    props.$width !== null &&
+    props.$width !== undefined &&
+    css`
+      width: ${props.$width};
+    `}
+
+  ${(props) =>
+    props.$height !== null &&
+    props.$height !== undefined &&
+    css`
+      height: ${props.$height};
+    `}
 
   ${(props) =>
     props.$maxWidth !== null &&

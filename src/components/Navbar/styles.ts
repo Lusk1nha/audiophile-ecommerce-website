@@ -105,7 +105,7 @@ const AnchorFlex = styled.ul`
 const Line = styled.div`
   background: white;
   width: 100%;
-  height: 1px;
+  height: 2px;
   opacity: 0.104;
 `;
 

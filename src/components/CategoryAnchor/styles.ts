@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { RawButton } from "../../styles/reusables-styles";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const StyledNavbarCategory = styled.li`
+const StyledCategoryAnchor = styled.li`
   width: 100%;
   height: 165px;
 
@@ -31,7 +31,7 @@ const CategoryImage = styled(LazyLoadImage)`
   margin-right: auto;
   position: absolute;
 
-  z-index: 5;
+  z-index: 0;
 `;
 
 const BlurryImage = styled.div`
@@ -81,10 +81,15 @@ const ShopButton = styled(RawButton)`
   letter-spacing: 1px;
   text-transform: uppercase;
   opacity: 0.5;
+
+  ${StyledCategoryAnchor}:hover & {
+    color: #d87d4a;
+    opacity: 1;
+  }
 `;
 
 export {
-  StyledNavbarCategory,
+  StyledCategoryAnchor,
   CategoryTitle,
   BlurryImage,
   CategoryImage,

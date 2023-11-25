@@ -17,7 +17,7 @@ import {
   ContentWrapper,
 } from "./styles";
 
-import { NavbarCategory } from "../NavbarCategory/NavbarCategory";
+import { CategoryAnchor } from "../CategoryAnchor/CategoryAnchor";
 import { CrossIcon } from "../Icons/CrossIcon";
 
 interface INavbarProps {
@@ -42,7 +42,7 @@ function Navbar({ isTranslucid }: INavbarProps) {
 
   return (
     <StyledNavbar $isTranslucid={isTranslucid} className="navbar-container">
-      <Wrapper $maxWidth={"1110px"}>
+      <Wrapper $height={"100%"}>
         <NavbarView>
           <MobileFlex>
             <MenuButton
@@ -77,17 +77,17 @@ function Navbar({ isTranslucid }: INavbarProps) {
         <MobileContent onClick={(event) => toggleContentOpen(event, false)}>
           <ContentWrapper onClick={onClickInContentList}>
             <ContentList>
-              <NavbarCategory
+              <CategoryAnchor
                 title="Headphones"
                 image="assets\product-xx99-mark-one-headphones\mobile\image-category-page-no-bg-preview.png"
               />
 
-              <NavbarCategory
+              <CategoryAnchor
                 title="Speakers"
                 image="assets\product-zx9-speaker\mobile\image-category-page-no-bg-preview.png"
               />
 
-              <NavbarCategory
+              <CategoryAnchor
                 title="Earphones"
                 image="assets\product-yx1-earphones\mobile\image-category-page-no-bg-preview.png"
               />

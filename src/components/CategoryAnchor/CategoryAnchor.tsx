@@ -4,17 +4,17 @@ import {
   CategoryImage,
   CategoryTitle,
   ShopButton,
-  StyledNavbarCategory,
+  StyledCategoryAnchor,
 } from "./styles";
 
-interface INavbarCategoryProps {
+interface ICategoryAnchorProps {
   title: string;
   image?: string;
 }
 
-function NavbarCategory({ title, image }: INavbarCategoryProps) {
+function CategoryAnchor({ title, image }: ICategoryAnchorProps) {
   return (
-    <StyledNavbarCategory title={title}>
+    <StyledCategoryAnchor title={title}>
       <CategoryImage
         effect="blur"
         src={image}
@@ -29,8 +29,8 @@ function NavbarCategory({ title, image }: INavbarCategoryProps) {
         Shop
         <LeftArrowIcon />
       </ShopButton>
-    </StyledNavbarCategory>
+    </StyledCategoryAnchor>
   );
 }
 
-export { NavbarCategory };
+export { CategoryAnchor };
