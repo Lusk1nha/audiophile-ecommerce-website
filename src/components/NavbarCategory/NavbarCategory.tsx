@@ -1,5 +1,6 @@
 import { LeftArrowIcon } from "../Icons/LeftArrowIcon";
 import {
+  BlurryImage,
   CategoryImage,
   CategoryTitle,
   ShopButton,
@@ -20,6 +21,8 @@ function NavbarCategory({ title, image }: INavbarCategoryProps) {
         height={90}
         title={`${title} product image`}
       />
+
+      <BlurryImage />
 
       <CategoryTitle>{title}</CategoryTitle>
       <ShopButton>

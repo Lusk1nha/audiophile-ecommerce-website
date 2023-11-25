@@ -43,9 +43,10 @@ function Navbar({ isTranslucid }: INavbarProps) {
   return (
     <StyledNavbar $isTranslucid={isTranslucid} className="navbar-container">
       <Wrapper $maxWidth={"1110px"}>
-        <NavbarView className="navbar-functions">
+        <NavbarView>
           <MobileFlex>
             <MenuButton
+              type="button"
               title="Click here to open the Menu"
               onClick={toggleContentOpen}
             >
@@ -64,7 +65,7 @@ function Navbar({ isTranslucid }: INavbarProps) {
             <Anchor text={"Earphones"} url={""} />
           </AnchorFlex>
 
-          <RawButton title="Click here to open the cart">
+          <RawButton type="button" title="Click here to open the cart">
             <CartIcon />
           </RawButton>
         </NavbarView>
@@ -73,10 +74,7 @@ function Navbar({ isTranslucid }: INavbarProps) {
       </Wrapper>
 
       {isContentOpen ? (
-        <MobileContent
-          className="mobile-navbar-content"
-          onClick={(event) => toggleContentOpen(event, false)}
-        >
+        <MobileContent onClick={(event) => toggleContentOpen(event, false)}>
           <ContentWrapper onClick={onClickInContentList}>
             <ContentList>
               <NavbarCategory

@@ -2,7 +2,7 @@ import { RouterProvider, createHashRouter } from "react-router-dom";
 import { Layout } from "../../pages/Layout/Layout";
 import { Home } from "../../pages/Home/Home";
 
-function Router() {
+function RouterHandler() {
   const routerMap = createHashRouter([
     {
       path: "/",
@@ -19,4 +19,4 @@ function Router() {
   return <RouterProvider router={routerMap} />;
 }
 
-export { Router };
+export { RouterHandler };

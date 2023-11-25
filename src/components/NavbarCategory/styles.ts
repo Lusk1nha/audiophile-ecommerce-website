@@ -30,6 +30,28 @@ const CategoryImage = styled(LazyLoadImage)`
   margin-left: auto;
   margin-right: auto;
   position: absolute;
+
+  z-index: 5;
+`;
+
+const BlurryImage = styled.div`
+  background: black;
+
+  width: 95px;
+  height: 15px;
+
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+
+  bottom: 70%;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+
+  filter: blur(22px);
+
+  z-index: 4;
 `;
 
 const CategoryTitle = styled.h3`
@@ -61,4 +83,10 @@ const ShopButton = styled(RawButton)`
   opacity: 0.5;
 `;
 
-export { StyledNavbarCategory, CategoryTitle, CategoryImage, ShopButton };
+export {
+  StyledNavbarCategory,
+  CategoryTitle,
+  BlurryImage,
+  CategoryImage,
+  ShopButton,
+};
